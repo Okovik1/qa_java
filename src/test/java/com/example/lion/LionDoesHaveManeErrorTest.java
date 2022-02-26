@@ -1,17 +1,25 @@
 package com.example.lion;
 
+import com.example.Feline;
 import com.example.Lion;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.junit.Assert.assertEquals;
 
+@RunWith(MockitoJUnitRunner.class)
 public class LionDoesHaveManeErrorTest {
-    private final String EXPECTED = "Используйте допустимые значения пола животного - самей или самка";
+    @Mock
+    Feline feline;
+
+    private final String EXPECTED = "Используйте допустимые значения пола животного - самец или самка";
 
     @Test
     public void lionDoesHaveManeErrorCheck() {
         try {
-            Lion lion = new Lion("Самец1");
+            Lion lion = new Lion("Самец1", feline);
             boolean actual = lion.doesHaveMane();
         } catch (java.lang.Exception exception) {
             assertEquals(EXPECTED, exception.getMessage());
