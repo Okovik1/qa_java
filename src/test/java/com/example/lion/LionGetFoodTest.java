@@ -16,6 +16,6 @@ public class LionGetFoodTest {
         List<String> expected = List.of(new String[]{"Животные", "Птицы", "Рыба"});
         List<String> actual = lion.getFood();
         assertEquals(expected, actual);
-
+ 
     }
 }

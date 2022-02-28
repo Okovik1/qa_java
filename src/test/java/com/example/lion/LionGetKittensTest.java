@@ -18,11 +18,4 @@ public class LionGetKittensTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    public void lionGetKittensCountCheck() throws Exception {
-        Lion lion = new Lion("Самец", new Feline());
-        int expected = 5;
-        int actual = lion.getKittens(5);
-        assertEquals(expected, actual);
-    }
 }
