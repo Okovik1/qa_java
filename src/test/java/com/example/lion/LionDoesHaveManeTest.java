@@ -40,7 +40,7 @@ public class LionDoesHaveManeTest {
     }
 
     @Test
-    public void lionDoesHaveManeCheck() throws Exception {
+    public void lionDoesHaveManeTest() throws Exception {
         Lion lion = new Lion(SEX, feline);
         boolean actual = lion.doesHaveMane();
         assertEquals(EXPECTED, actual);
